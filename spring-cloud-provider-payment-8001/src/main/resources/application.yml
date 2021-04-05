@@ -1,0 +1,10 @@
+server:
+  port: 8001
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:13306/springcloud2021?useSSL=false
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: jliang83
+  application:
+    name: spring-cloud-provider-payment-8001
