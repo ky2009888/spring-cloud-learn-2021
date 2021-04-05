@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 
 /**
- * @Author ky2009666
- * @Description 支付
- * @Date 2021/4/5
+ * @author ky2009666
+ * @description 支付
+ * @date 2021/4/5
  **/
 @RequestMapping("/pay")
 @RestController

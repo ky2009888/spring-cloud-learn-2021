@@ -4,15 +4,17 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
+
 /**
- * @Author ky2009666
- * @Description 通用结果封装处理.
- * @Date 2021/4/5
+ * @author ky2009666
+ * @description 通用结果封装处理.
+ * @date 2021/4/5
  **/
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class CommonResult<T> {
+public class CommonResult<T> implements Serializable {
     /**
      * 定义处理结果的状态码.
      */
