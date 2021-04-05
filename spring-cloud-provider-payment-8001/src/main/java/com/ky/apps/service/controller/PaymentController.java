@@ -33,6 +33,7 @@ public class PaymentController {
      */
     @GetMapping("/byId")
     public CommonResult<Payment> optById(Long id) {
+        log.info("打印相关支付日志:{}",id);
         return new CommonResult(200, "查询成功", paymentService.getById(id));
     }
 }
