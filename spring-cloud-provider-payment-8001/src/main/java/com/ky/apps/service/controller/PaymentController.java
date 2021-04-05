@@ -1,5 +1,6 @@
 package com.ky.apps.service.controller;
 
+import com.ky.apps.service.common.domain.CommonResult;
 import com.ky.apps.service.domain.Payment;
 import com.ky.apps.service.service.PaymentService;
 import lombok.extern.slf4j.Slf4j;
@@ -31,7 +32,7 @@ public class PaymentController {
      * @return Payment。
      */
     @GetMapping("/byId")
-    public Payment optById(Long id) {
-        return paymentService.getById(id);
+    public CommonResult<Payment> optById(Long id) {
+        return new CommonResult(200, "查询成功", paymentService.getById(id));
     }
 }
