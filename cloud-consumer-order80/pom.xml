@@ -9,10 +9,10 @@
         <relativePath/>
     </parent>
     <groupId>com.ky.apps.service</groupId>
-    <artifactId>spring-cloud-provider-payment-8001</artifactId>
+    <artifactId>cloud-consumer-order80</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-cloud-provider-payment-8001</name>
-    <description>Demo project for Spring Boot</description>
+    <name>cloud-consumer-order80</name>
+    <description>spring-cloud-provider-order-80</description>
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -98,9 +98,11 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <fork>true</fork>
-                    <addResources>true</addResources>
                     <excludes>
+                        <exclude>
+                            <groupId>org.springframework.boot</groupId>
+                            <artifactId>spring-boot-configuration-processor</artifactId>
+                        </exclude>
                         <exclude>
                             <groupId>org.projectlombok</groupId>
                             <artifactId>lombok</artifactId>

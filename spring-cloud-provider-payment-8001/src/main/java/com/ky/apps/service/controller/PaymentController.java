@@ -4,9 +4,7 @@ import com.ky.apps.service.common.domain.CommonResult;
 import com.ky.apps.service.domain.Payment;
 import com.ky.apps.service.service.PaymentService;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 
@@ -33,7 +31,17 @@ public class PaymentController {
      */
     @GetMapping("/byId")
     public CommonResult<Payment> optById(Long id) {
-        log.info("打印相关支付日志:{}",id);
+        log.info("打印相关支付日志:{}", id);
         return new CommonResult(200, "查询成功", paymentService.getById(id));
+    }
+
+    /**
+     * 根据主键查询
+     *
+     * @return Payment。
+     */
+    @PostMapping("/pay")
+    public CommonResult<Payment> pay(@RequestBody Payment payment) {
+        return new CommonResult(200, "支付成功", paymentService.save(payment));
     }
 }

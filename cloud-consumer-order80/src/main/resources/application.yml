@@ -1,0 +1,10 @@
+server:
+  port: 80
+spring:
+  application:
+    name: spring-cloud-provider-order-80
+  datasource:
+    url: jdbc:mysql://localhost:13306/springcloud2021?useSSL=false
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: jliang83
