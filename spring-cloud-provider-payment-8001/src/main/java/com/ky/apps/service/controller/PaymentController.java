@@ -32,7 +32,7 @@ public class PaymentController {
     @GetMapping("/byId")
     public CommonResult<Payment> optById(Long id) {
         log.info("打印相关支付日志:{}", id);
-        return new CommonResult(200, "查询成功", paymentService.getById(id));
+        return new CommonResult<>(200, "查询成功", paymentService.getById(id));
     }
 
     /**
@@ -41,7 +41,7 @@ public class PaymentController {
      * @return Payment。
      */
     @PostMapping("/pay")
-    public CommonResult<Payment> pay(@RequestBody Payment payment) {
-        return new CommonResult(200, "支付成功", paymentService.save(payment));
+    public CommonResult<Boolean> pay(@RequestBody Payment payment) {
+        return new CommonResult<>(200, "支付成功", paymentService.save(payment));
     }
 }

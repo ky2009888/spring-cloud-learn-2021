@@ -14,7 +14,7 @@ import java.io.Serializable;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class CommonResult<T> implements Serializable {
+public class CommonResult<T extends Serializable> implements Serializable {
     /**
      * 定义处理结果的状态码.
      */
