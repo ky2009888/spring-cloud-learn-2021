@@ -1,4 +1,4 @@
-package com.ky.apps.service.common.domain;
+package om.ky.apps.service.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

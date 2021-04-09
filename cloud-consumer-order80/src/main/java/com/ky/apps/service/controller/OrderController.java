@@ -1,10 +1,9 @@
 package com.ky.apps.service.controller;
 
 import cn.hutool.core.lang.ObjectId;
-import cn.hutool.core.util.ObjectUtil;
-import com.ky.apps.service.domain.CommonResult;
-import com.ky.apps.service.domain.Payment;
 import lombok.extern.slf4j.Slf4j;
+import om.ky.apps.service.domain.CommonResult;
+import om.ky.apps.service.domain.Payment;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -34,8 +33,8 @@ public class OrderController {
      * @return
      */
     @GetMapping("show")
-    public String showOrder() {
-        ResponseEntity<CommonResult> forEntity = restTemplate.getForEntity("http://127.0.0.1:8001/pay/byId?id={1}", CommonResult.class, Long.parseLong("1"));
+    public String showOrder(long id) {
+        ResponseEntity<CommonResult> forEntity = restTemplate.getForEntity("http://127.0.0.1:8001/pay/byId?id={1}", CommonResult.class, id);
         CommonResult commonResult = forEntity.getBody();
         String resultStr = commonResult.getData().toString();
         log.info("{}",resultStr);

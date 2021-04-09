@@ -1,7 +1,7 @@
 package com.ky.apps.service.mapper;
 
-import com.ky.apps.service.domain.OrderInfo;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import om.ky.apps.service.domain.OrderInfo;
 
 /**
  * @author Lenovo

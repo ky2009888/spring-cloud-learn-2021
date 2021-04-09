@@ -1,15 +1,17 @@
-package com.ky.apps.service.domain;
+package om.ky.apps.service.domain;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.Data;
+
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
-import lombok.Data;
 
 /**
  * null
+ * @author Lenovo
  * @TableName order_info
  */
 @TableName(value ="order_info")

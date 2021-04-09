@@ -1,18 +1,18 @@
-package com.ky.apps.service.domain;
+package om.ky.apps.service.domain;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-
-import java.io.Serializable;
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
+
 /**
- * null
+ * 支付实体类.
  *
+ * @author Lenovo
  * @TableName payment
  */
 @TableName(value = "payment")

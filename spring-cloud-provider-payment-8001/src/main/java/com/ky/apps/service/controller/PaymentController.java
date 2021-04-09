@@ -1,9 +1,9 @@
 package com.ky.apps.service.controller;
 
-import com.ky.apps.service.common.domain.CommonResult;
-import com.ky.apps.service.domain.Payment;
 import com.ky.apps.service.service.PaymentService;
 import lombok.extern.slf4j.Slf4j;
+import om.ky.apps.service.domain.CommonResult;
+import om.ky.apps.service.domain.Payment;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;

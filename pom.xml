@@ -11,6 +11,7 @@
     <modules>
         <module>spring-cloud-provider-payment-8001</module>
         <module>cloud-consumer-order80</module>
+        <module>cloud-api-commons</module>
     </modules>
     <properties>
         <maven.compiler.source>8</maven.compiler.source>

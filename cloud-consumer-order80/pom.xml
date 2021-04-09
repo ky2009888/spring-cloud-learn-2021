@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.ky.apps.service</groupId>
     <artifactId>cloud-consumer-order80</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0-SNAPSHOT</version>
     <name>cloud-consumer-order80</name>
     <description>spring-cloud-provider-order-80</description>
     <properties>
@@ -28,6 +28,7 @@
         <fastjson.verison>1.2.75</fastjson.verison>
         <mybatis.spring.boot.verison>1.3.0</mybatis.spring.boot.verison>
         <hutool.verison>5.3.5</hutool.verison>
+        <project.verison>1.0-SNAPSHOT</project.verison>
     </properties>
     <dependencies>
         <dependency>
@@ -89,6 +90,11 @@
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
             <version>${hutool.verison}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.ky.apps.service</groupId>
+            <artifactId>cloud-api-commons</artifactId>
+            <version>${project.verison}</version>
         </dependency>
     </dependencies>
 
