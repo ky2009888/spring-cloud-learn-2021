@@ -8,3 +8,9 @@ spring:
     password: jliang83
   application:
     name: spring-cloud-provider-payment-8001
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
+    register-with-eureka: true
+    fetch-registry: true

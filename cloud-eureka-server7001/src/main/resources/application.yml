@@ -1,0 +1,13 @@
+server:
+  port: 7001
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    #false:本身是注册中心，因此注册中心不需要向自己注册.
+    register-with-eureka: false
+    #false:本身是注册中心，职责是维护服务实例，不需要去检索服务
+    fetch-registry: false
+    service-url:
+      #设置与Eureka Server交互的地址查询服务和注册服务都需要依赖这个地址
+      defaultZone: http://localhost:7001/eureka/
