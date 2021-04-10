@@ -1,0 +1,11 @@
+server:
+  port: 7002
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      #注册到集群中的其他注册中心上面，有几台机器写几个地址，中间用逗号分隔
+      defaultZone: http://localhost:7003/eureka/
+    fetch-registry: false
+    register-with-eureka: false
