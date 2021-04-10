@@ -35,7 +35,7 @@ public class OrderController {
     @GetMapping("show")
     @ResponseBody
     public String showOrder(long id) {
-        CommonResult<Payment> commonResult = restTemplate.getForEntity("http://127.0.0.1:8001/pay/byId?id={1}", CommonResult.class, id).getBody();
+        CommonResult commonResult = restTemplate.getForEntity("http://127.0.0.1:8001/pay/byId?id={1}", CommonResult.class, id).getBody();
         String resultStr = "";
         if (commonResult != null && commonResult.getData() != null) {
             resultStr = commonResult.getData().toString();
