@@ -15,3 +15,4 @@ eureka:
       defaultZone: http://localhost:7001/eureka/
     register-with-eureka: true
     fetch-registry: true
+  instance-id: order81
