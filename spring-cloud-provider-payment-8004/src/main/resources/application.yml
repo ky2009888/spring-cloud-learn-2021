@@ -1,0 +1,14 @@
+server:
+  port: 8004
+spring:
+  application:
+    name: spring-cloud-provider-payment-8004
+  datasource:
+    username: root
+    password: jliang83
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:13306/springcloud2021?useSSL=false
+  cloud:
+    zookeeper:
+      connect-string: 192.168.64.6:2181,192.168.64.7:2181,192.168.64.8:2181
+

@@ -12,6 +12,7 @@
         <module>spring-cloud-provider-payment-8001</module>
         <module>spring-cloud-provider-payment-8002</module>
         <module>spring-cloud-provider-payment-8003</module>
+        <module>spring-cloud-provider-payment-8004</module>
         <module>cloud-consumer-order80</module>
         <module>cloud-consumer-order81</module>
         <module>cloud-api-commons</module>
