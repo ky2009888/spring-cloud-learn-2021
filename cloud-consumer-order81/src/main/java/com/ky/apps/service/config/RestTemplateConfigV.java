@@ -11,7 +11,7 @@ import org.springframework.web.client.RestTemplate;
  * @Date 2021/4/8
  **/
 @Configuration
-public class RestTemplateConfig {
+public class RestTemplateConfigV {
     /**
      * 将restTemplate句柄注入.
      * 通过@LoadBalanced开启负载均衡功能
@@ -20,7 +20,7 @@ public class RestTemplateConfig {
      */
     @Bean
     @LoadBalanced
-    public RestTemplate restTemplate() {
+    public RestTemplate restTemplateV() {
         return new RestTemplate();
     }
 }

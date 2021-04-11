@@ -1,0 +1,16 @@
+server:
+  port: 8002
+spring:
+  application:
+    name: spring-cloud-provider-payment
+  datasource:
+    url: jdbc:mysql://localhost:13306/springcloud2021?useSSL=false
+    password: jliang83
+    username: root
+    driver-class-name: com.mysql.jdbc.Driver
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:7002/eureka/,http://localhost:7003/eureka/
