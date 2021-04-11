@@ -11,7 +11,7 @@
     <groupId>com.ky.apps.service</groupId>
     <artifactId>cloud-consumer-order81</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>cloud-consumer-order80</name>
+    <name>cloud-consumer-order81</name>
     <description>spring-cloud-provider-order-81</description>
     <properties>
         <java.version>1.8</java.version>
