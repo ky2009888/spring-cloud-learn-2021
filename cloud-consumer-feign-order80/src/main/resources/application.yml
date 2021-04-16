@@ -10,3 +10,24 @@ eureka:
     register-with-eureka: false
   instance:
     instance-id: cloud-consumer-feign-order80
+#配置ribbon的超时时间
+#自定义ribbon的超时时间
+ribbon:
+  ReadTimeout: 5000 #处理请求的超时时间，默认为5秒
+  ConnectTimeout: 5000 #连接建立的超时时长，默认5秒
+  MaxAutoRetries: 1 #同一台实例的最大重试次数，但是不包括首次调用，默认为1次
+  MaxAutoRetriesNextServer: 0 #重试负载均衡其他实例的最大重试次数，不包括首次调用，默认为0次
+  OkToRetryOnAllOperations: false #/是否对所有操作都重试，默认false
+#feign日志的配置，需要在debug基础之上进行配置.
+#因此全局日志配置需要分两步,第一步配置debug日志，第二步，配置feign日志
+logging:
+  level:
+    com:
+      ky:
+        apps:
+          service: debug
+feign:
+  client:
+    config:
+      default:
+        loggerLevel: FULL
