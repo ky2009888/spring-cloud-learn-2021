@@ -1,0 +1,19 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: cloud-provider-hystrix-payment8001
+  datasource:
+    url: jdbc:mysql://localhost:13306/springcloud2021?useSSL=false
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: jliang83
+eureka:
+  client:
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
+  instance:
+    instance-id: cloud-provider-hystrix-payment8001
+    lease-renewal-interval-in-seconds: 30
+    lease-expiration-duration-in-seconds: 30

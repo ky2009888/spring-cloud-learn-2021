@@ -14,7 +14,9 @@
         <module>spring-cloud-provider-payment-8003</module>
         <module>spring-cloud-provider-payment-8004</module>
         <module>spring-cloud-provider-payment-openfeign-8001</module>
+        <module>cloud-provider-hystrix-payment8001</module>
         <module>cloud-consumer-order80</module>
+        <module>cloud-consumer-feign-hystrix-order80</module>
         <module>cloud-consumer-order81</module>
         <module>cloud-consumer-order82</module>
         <module>cloud-consumer-feign-order80</module>
