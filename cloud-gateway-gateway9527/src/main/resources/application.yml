@@ -1,0 +1,23 @@
+server:
+  port: 9527
+spring:
+  application:
+    name: cloud-gateway-gateway9527
+  cloud:
+    gateway:
+      routes:
+        #下面的配置id,uri,predicates要能够实现对齐，否则spring cloud gateway解析辉报错
+        - id: spring-cloud-provider-payment-8001-rutes
+          #uri: http://localhost:8001
+          uri: lb://SPRING-CLOUD-PROVIDER-PAYMENT-8001
+          predicates:
+            - Path=/pay/**
+      discovery:
+        locator:
+          enabled: true
+eureka:
+  client:
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
+    register-with-eureka: true
