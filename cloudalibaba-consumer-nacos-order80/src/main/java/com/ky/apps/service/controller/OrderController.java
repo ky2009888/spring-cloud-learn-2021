@@ -1,6 +1,7 @@
 package com.ky.apps.service.controller;
 
 import cn.hutool.core.lang.ObjectId;
+import com.ky.apps.service.service.PaymentService;
 import lombok.extern.slf4j.Slf4j;
 import om.ky.apps.service.domain.CommonResult;
 import om.ky.apps.service.domain.Payment;
@@ -15,59 +16,28 @@ import javax.annotation.Resource;
 /**
  * @Author ky2009666
  * @Description 订单服务
- * @Date 2021/4/6
+ * @Date 2021/4/19
  **/
 @RestController
 @RequestMapping("order")
 @Slf4j
 public class OrderController {
     /**
-     * 备注:SPRING-CLOUD-PROVIDER-PAYMENT-8001这个是EUREKA注册中心的地址，
-     * 通过eureka的注册服务页面http://localhost:7001/可以看到
-     */
-    public static final String HTTP_PAYMENT_URL_SERVICE_SINGLE = "http://cloudalibaba-provider-payment9001";
-    /**
-     * 自动注入RestTemplate.
+     * 定义支付的服务.
      */
     @Resource
-    private RestTemplate restTemplate;
+    private PaymentService paymentService;
 
     /**
      * 显示订单信息
      *
      * @return
      */
-    @GetMapping("show")
+    @GetMapping("optById")
     @ResponseBody
-    public String showOrder(long id) {
-        String queryPaymentByIdUrl = HTTP_PAYMENT_URL_SERVICE_SINGLE + "/pay/byId?id={1}";
-        log.info("{}", queryPaymentByIdUrl);
-        CommonResult commonResult = restTemplate.getForEntity(queryPaymentByIdUrl, CommonResult.class, id).getBody();
-        String resultStr = "";
-        if (commonResult != null && commonResult.getData() != null) {
-            resultStr = commonResult.getData().toString();
-            log.info("{}", resultStr);
-        }
-        return resultStr;
+    public CommonResult<Payment> optById(long id) {
+        CommonResult<Payment> paymentCommonResult = paymentService.optById(id);
+        return paymentCommonResult;
     }
 
-    /**
-     * 支付订单.
-     *
-     * @return resultStr。
-     */
-    @GetMapping("pay")
-    @ResponseBody
-    public CommonResult<Payment> payOrder() {
-        String queryPaymentCreateUrl = HTTP_PAYMENT_URL_SERVICE_SINGLE + "/pay/pay";
-        log.info("{}", queryPaymentCreateUrl);
-        Payment payment = new Payment(ObjectId.next());
-        CommonResult<Payment> commonResult = restTemplate.postForObject(queryPaymentCreateUrl, payment, CommonResult.class);
-        String resultStr = "";
-        if (commonResult != null && commonResult.getData() != null) {
-            resultStr = commonResult.getData().toString();
-            log.info("{}", resultStr);
-        }
-        return commonResult;
-    }
 }
