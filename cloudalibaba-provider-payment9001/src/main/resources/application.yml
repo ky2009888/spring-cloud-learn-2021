@@ -1,6 +1,6 @@
 spring:
   application:
-    name: cloudalibaba-provider-payment9001
+    name: cloudalibaba-provider-cluster-payment
   datasource:
     username: root
     password: jliang83

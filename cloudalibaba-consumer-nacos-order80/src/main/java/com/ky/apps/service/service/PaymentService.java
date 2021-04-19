@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @Date 2021/4/15
  **/
 @Component
-@FeignClient(value = "cloudalibaba-provider-payment9001")
+@FeignClient(value = "cloudalibaba-provider-cluster-payment")
 public interface PaymentService {
     /**
      * 根据主键查询
