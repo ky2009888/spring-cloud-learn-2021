@@ -1,0 +1,13 @@
+jasypt:
+  encryptor:
+    password: Qwer@#1234
+server:
+  port: 8001
+spring:
+  application:
+    name: cloud-provider-hystrix-payment8001
+  datasource:
+    url: jdbc:mysql://localhost:13306/springcloud2021?useSSL=false
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: ENC(S5s9G6Sxid5mxfJmhdg9lQ==)
