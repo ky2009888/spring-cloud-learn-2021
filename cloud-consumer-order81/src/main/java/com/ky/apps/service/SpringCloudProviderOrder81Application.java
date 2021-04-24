@@ -12,7 +12,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 public class SpringCloudProviderOrder81Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringCloudProviderOrder80Application.class, args);
+        SpringApplication.run(SpringCloudProviderOrder81Application.class, args);
     }
 
 }
